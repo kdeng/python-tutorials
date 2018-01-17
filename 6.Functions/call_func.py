@@ -20,3 +20,10 @@ print('before l: ', l)
 appendEnd(l)
 print('after l: ', l)
 
+def person(name, age, *args, city, job):
+    print(name, age, args, city, job)
+
+
+person('Jack', 24, city='Beijing', job='Engineer')
+
+person('Mike', 44, 1, 2, 3, city='Shanghai', job='Engineer')
