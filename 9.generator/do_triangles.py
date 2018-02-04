@@ -35,5 +35,5 @@ for t in triangles2(10):
     print(t)
     n = n + 1
     if n == 10:
-        break;
+        break
 
