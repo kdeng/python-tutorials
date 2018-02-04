@@ -10,7 +10,7 @@ def fib1(max):
 fib1(10)
 
 
-### Define a function to instantiate generator
+### Define a generator function
 def fib2(max):
     n, a, b = 0, 0, 1
     while n < max:
