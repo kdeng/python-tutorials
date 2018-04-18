@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+
+'''
+this is a demo code for folk
+a single process folks multiple child processes
+'''
+
+import os
+
+print('Process (%s) start ...' % os.getpid())
+
+pid = os.fork()
+
+if pid == 0:
+    print("# I am child process (%s) and my parent is %s." % (os.getpid(), os.getppid()))
+else:
+    print("* I (%s) just created a child process (%s)." % (os.getpid(), pid))
+
+print("---- this message should be dislayed 2 times")
+
+pid = os.fork()
+
+if pid == 0:
+    print("## I am child process (%s) and my parent is %s." % (os.getpid(), os.getppid()))
+else:
+    print("** I (%s) just created a child process (%s)." % (os.getpid(), pid))
+
+print("==== this is last message, and it should be displayed 4 times")
